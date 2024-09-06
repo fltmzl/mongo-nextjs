@@ -22,6 +22,7 @@ export async function POST(req: Request) {
   const ipAddress = getClientIp(req);
 
   try {
+    console.log(JSON.stringify(body.geo));
     const location = new Location({
       ip: ipAddress,
       geo: JSON.stringify(body.geo),
